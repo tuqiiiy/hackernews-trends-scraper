@@ -1,49 +1,64 @@
-{
-  "actorSpecification": 1,
-  "name": "hackernews-trends-scraper",
-  "title": "Hacker News Trends & Top Stories Scraper",
-  "description": "Scrape top, trending, best, and new Hacker News stories with points, comment counts, author handles, timestamps, and target links. Ideal for tech monitoring, AI summarizers, and news aggregators.",
-  "version": "1.0",
-  "meta": {
-    "templateId": "project_empty"
-  },
-  "dockerfile": "./Dockerfile",
-  "categories": [
-    "DEVELOPER_TOOLS",
-    "NEWS"
-  ],
-  "storages": {
-    "dataset": {
-      "actorSpecification": 1,
-      "title": "Hacker News Stories Dataset",
-      "views": {
-        "overview": {
-          "title": "Overview",
-          "transformation": {
-            "fields": [
-              "title",
-              "score",
-              "commentsCount",
-              "by",
-              "url",
-              "hnUrl",
-              "postedAt"
-            ]
-          },
-          "display": {
-            "component": "table",
-            "columns": {
-              "title": { "label": "Title" },
-              "score": { "label": "Points (Score)" },
-              "commentsCount": { "label": "Comments" },
-              "by": { "label": "Author" },
-              "url": { "label": "Target URL" },
-              "hnUrl": { "label": "HN Discussion" },
-              "postedAt": { "label": "Posted Date" }
-            }
-          }
-        }
-      }
-    }
-  }
+﻿{
+    "actorSpecification":  1,
+    "name":  "hackernews-trends-scraper",
+    "title":  "Hacker News Trends \u0026 Top Stories Scraper",
+    "description":  "Scrape top, trending, best, and new Hacker News stories with points, comment counts, author handles, timestamps, and target links. Ideal for tech monitoring, AI summarizers, and news aggregators.",
+    "version":  "1.0",
+    "meta":  {
+                 "templateId":  "project_empty"
+             },
+    "dockerfile":  "./Dockerfile",
+    "categories":  [
+                       "DEVELOPER_TOOLS",
+                       "NEWS"
+                   ],
+    "storages":  {
+                     "dataset":  {
+                                     "actorSpecification":  1,
+                                     "title":  "Hacker News Stories Dataset",
+                                     "views":  {
+                                                   "overview":  {
+                                                                    "title":  "Overview",
+                                                                    "transformation":  {
+                                                                                           "fields":  [
+                                                                                                          "title",
+                                                                                                          "score",
+                                                                                                          "commentsCount",
+                                                                                                          "by",
+                                                                                                          "url",
+                                                                                                          "hnUrl",
+                                                                                                          "postedAt"
+                                                                                                      ]
+                                                                                       },
+                                                                    "display":  {
+                                                                                    "component":  "table",
+                                                                                    "columns":  {
+                                                                                                    "title":  {
+                                                                                                                  "label":  "Title"
+                                                                                                              },
+                                                                                                    "score":  {
+                                                                                                                  "label":  "Points (Score)"
+                                                                                                              },
+                                                                                                    "commentsCount":  {
+                                                                                                                          "label":  "Comments"
+                                                                                                                      },
+                                                                                                    "by":  {
+                                                                                                               "label":  "Author"
+                                                                                                           },
+                                                                                                    "url":  {
+                                                                                                                "label":  "Target URL"
+                                                                                                            },
+                                                                                                    "hnUrl":  {
+                                                                                                                  "label":  "HN Discussion"
+                                                                                                              },
+                                                                                                    "postedAt":  {
+                                                                                                                     "label":  "Posted Date"
+                                                                                                                 }
+                                                                                                }
+                                                                                }
+                                                                }
+                                               }
+                                 }
+                 },
+    "output":  "./output_schema.json"
 }
