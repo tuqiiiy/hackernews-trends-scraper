@@ -1,0 +1,38 @@
+{
+  "title": "Hacker News Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "section": {
+      "title": "Story Section",
+      "type": "string",
+      "description": "Choose which stories feed to scrape from Hacker News.",
+      "default": "top",
+      "editor": "select",
+      "enum": ["top", "best", "new", "ask", "show", "job"],
+      "enumTitles": [
+        "Top Stories (Trending)",
+        "Best Stories (Highest Rated)",
+        "Newest Stories",
+        "Ask HN",
+        "Show HN",
+        "Job Postings"
+      ]
+    },
+    "maxItems": {
+      "title": "Max Items",
+      "type": "integer",
+      "description": "Maximum number of stories to extract.",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 500
+    },
+    "minScore": {
+      "title": "Minimum Score (Points)",
+      "type": "integer",
+      "description": "Filter stories with at least this many upvotes.",
+      "default": 0,
+      "minimum": 0
+    }
+  }
+}

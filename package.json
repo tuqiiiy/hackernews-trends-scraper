@@ -1,0 +1,17 @@
+{
+  "name": "hackernews-trends-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Fast Hacker News scraper for top, best, new, and ask/show stories, points, comments, author data, and URLs.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "tuqiiiy",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "apify": "^3.2.6",
+    "crawlee": "^3.12.2",
+    "got-scraping": "^4.0.7"
+  }
+}
